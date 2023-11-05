@@ -26,6 +26,9 @@ namespace Services.Camera
 		{
 			mainCamera.transform.rotation = newRotation;
 			eulerAngles = mainCamera.transform.eulerAngles;
+
+			if (eulerAngles.x > 90f)
+				eulerAngles.x -= 360f;
 		}
 
 		private void Rotate()
